@@ -3,7 +3,7 @@ from point import Point
 
 
 class Cell:
-    def __init__(self, window=None) -> None:
+    def __init__(self, window=None):
         self.left = True
         self.right = True
         self.top = True
@@ -79,7 +79,7 @@ class Cell:
 
         # up
         elif self._y1 > to_cell._y1:
-            line = Line(Point(self._x1, midTwo), Point(midOne, self._y1))
+            line = Line(Point(midOne, midTwo), Point(midOne, self._y1))
             self.window.draw_line(line, fill)
             line = Line(Point(toMidOne, to_cell._y2),
                         Point(toMidOne, toMidTwo))

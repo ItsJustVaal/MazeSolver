@@ -15,6 +15,14 @@ def main():
     maze = Maze(margin, margin, num_rows, num_cols,
                 cell_size_x, cell_size_y, window)
 
+    print("Maze Created")
+    solvable = maze.solve()
+    print(solvable)
+    if not solvable:
+        print("Maze cannot be solved")
+    else:
+        print("Maze solved!")
+
     window.wait_for_close()
 
 
